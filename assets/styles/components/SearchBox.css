@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .feature {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.container .feature .content {
+    display: flex;
+    flex: 1;
+}
+
+.container .feature .input {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.container .feature .input label {
+    display: flex;
+}
+
+.container .feature .input label > * {
+}
+
+
+.container .feature .preview {
+    margin: 5px;
+    padding-left: 5px;
+    flex-grow: 1;
+    border-left: 1px solid grey;
+}
+
+
+.container .feature .title {
+    border-bottom: 1px solid grey;
+    padding-bottom: 5px;
+}
+

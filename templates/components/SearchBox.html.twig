@@ -1,0 +1,63 @@
+<div{{ attributes }}>
+    <link rel="stylesheet" href="{{ asset('styles/components/SearchBox.css') }}">
+    <div class="container">
+        <div class="feature">
+            <div class="title">
+                Simple text field
+            </div>
+            <div class="content">
+                <div class="input">
+                    <label for="search">Search:</label>
+                    <input id="search" type="text" data-model="search">
+                </div>
+                <div class="preview">
+                    Search: {{ this.search }}
+                </div>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="title">Array prop</div>
+            <div class="content">
+                <div class="input">
+                    <label>New tag
+                        <input type="text" data-model="on(change)|newTag">
+                    </label>
+                </div>
+                <div class="preview">
+                    Tags:
+                    <ul>
+                        {% for tag in tags %}
+                            <li>
+                                {{ tag }}
+                                <button
+                                    data-action="live#action"
+                                    data-action-name="removeTag(tag={{ tag }})"
+                                >X</button>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="title">DTO prop</div>
+            <div class="content">
+                <div class="input">
+                    <label>
+                        User id:
+                        <input type="number" data-model="user.id">
+                    </label>
+                    <label>
+                        User name:
+                        <input type="text" data-model="user.name">
+                    </label>
+                </div>
+                <div class="preview">
+                    User: { id: {{ user.id }}, name: {{ user.name }} }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
