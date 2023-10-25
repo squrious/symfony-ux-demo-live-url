@@ -6,7 +6,7 @@
 
 ```bash
 git clone https://github.com/squrious/symfony-ux
-cd symfony-ux && git checkout live_component_url_prop
+cd symfony-ux && git checkout live-component/live-prop-url-binding && cd -
 ```
 
 2. Clone this project
